@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Login Clone</title>
+    <style>
+        body {
+            font-family: Arial ,sans-serif;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border: 1px solid white;
+            text-align: center;
+            width: 300px;
+        }
+
+        .login-box h2 {
+            font-family: 'Georgia', serif;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: skyblue;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .extras {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .extras a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Instagram</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="validateLogin()">Log in</button>
+    <div class="extras">
+        <label><input type="checkbox"> Remember me</label> <br>
+        <a href="#">Forgot password?</a><br>
+        <p>Don't have an account? <a href="#">Sign up here</a></p>
+    </div>
+</div>
+
+<script>
+    function validateLogin() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === "" || password === "") {
+            alert("Please fill in both fields.");
+        } else {
+            alert("Logging in...");
+            // Optionally, add real authentication here.
+        }
+    }
+</script>
+
+</body>
+</html>
